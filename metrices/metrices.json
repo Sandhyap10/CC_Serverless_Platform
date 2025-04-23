@@ -1,0 +1,2 @@
+{"function_id": "abc123", "timestamp": "2025-04-10T17:00", "runtime": "docker", "status": "success", "duration": 1.24}
+{"function_id": "def456", "timestamp": "2025-04-10T17:01", "runtime": "docker", "status": "failure", "duration": 2.00}

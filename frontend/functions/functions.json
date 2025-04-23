@@ -1,0 +1,26 @@
+[
+  {
+    "id": "func_7e1c2667",
+    "name": "Hello_world",
+    "code": "def handler(event):\n    return {\"message\": \"Hello\", \"input\": event}",
+    "runtime": "docker"
+  },
+  {
+    "id": "func_781bcb99",
+    "name": "python2",
+    "code": "print(\"hellooo\")",
+    "runtime": "gvisor"
+  },
+  {
+    "id": "func_96efefe9",
+    "name": "math",
+    "code": "def handler(event):\n    operation = event.get(\"operation\")\n    numbers = event.get(\"numbers\", [])\n    \n    if operation == \"sum\":\n        result = sum(numbers)\n    elif operation == \"multiply\":\n        result = 1\n        for num in numbers:\n            result *= num\n    elif operation == \"average\":\n        result = sum(numbers) / len(numbers)\n    else:\n        return {\"error\": \"Invalid operation\"}\n        \n    return {\n        \"operation\": operation,\n        \"numbers\": numbers,\n        \"result\": result\n    }",
+    "runtime": "docker"
+  },
+  {
+    "id": "func_d34724c9",
+    "name": "basic",
+    "code": "def handler(event):\n    name = event.get(\"name\", \"World\")\n    return {\n        \"message\": f\"Hello, {name}!\",\n        \"timestamp\": time.time()\n    }",
+    "runtime": "docker"
+  }
+]
